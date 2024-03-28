@@ -48,7 +48,6 @@ public class UserController {
     @GetMapping("/user/{username}")
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<UserDTO> getUserInfo(@PathVariable String username) {
-        System.out.print("들어오나요?");
         return ResponseEntity.ok(userService.getUserWithAuthorities(username));
     }
 }
