@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: jwtRedisProj
+  datasource:
+    url: jdbc:mysql://localhost:3306/jwtredisprac
+    username: prac
+    password: '0000'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+logging:
+  level:
+    me.silver nine: DEBUG
+
+jwt:
+  header: Authorization
+  secret: SpringBootSecurityJwtSecretKeyPlusRedisConnectSoLoginPage
+  token-validity-in-seconds: 86400
